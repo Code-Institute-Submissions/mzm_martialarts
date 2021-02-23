@@ -1,0 +1,37 @@
+<!doctype html>
+
+<div class="collapse navbar-collapse" id="main_nav">
+    <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}">About <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}">Training</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{% url 'home' %}">Membership plans</a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Timetable
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{% url 'home' %}">Kids Classes</a>
+                <a class="dropdown-item" href="{% url 'home' %}">Adult Classes</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Online Classes
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{% url 'home' %}">Free trials</a>
+                <a class="dropdown-item" href="{% url 'home' %}">Novice</a>
+                <a class="dropdown-item" href="{% url 'home' %}">Intermediate</a>
+                <a class="dropdown-item" href="{% url 'home' %}">Advanced</a>
+            </div>
+        </li>
+    </ul>
+</div>
