@@ -79,3 +79,12 @@ body {
         padding-top: 164px;
     }
 }
+
+ i.fas,
+    i.fab {
+      color: white;
+    }
+
+.icon_label {
+    color: white;
+}
