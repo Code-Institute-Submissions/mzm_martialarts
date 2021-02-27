@@ -2,15 +2,89 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_head %}
+<script src="https://js.stripe.com/v3/"></script>
+{% endblock %}
+
+{% block extra_title %}
+<title>Checkout</title>
+{% endblock %}
+
 {% block page_header %}
     <div class="container h-100">
         <div class="row h-100">
-            <div class="col">
+            <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+                <h1 class="display-4">Membership Plans</h1>
+                <p class="lead">Our online exclusive membership will help kick off or continue your journey in martial
+                    arts
+                    with
+                    subscriptions provided for students of all ability levels.</p>
+            </div>
+            <div class="container">
+                <div class="card-deck mb-3 text-center">
+                    {% for p in products %}
+                    <div class="card mb-4 box-shadow">
+                        <div class="card-header">
+                            <h4 class="my-0 font-weight-normal">{{p.name}}</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-unstyled mt-3 mb-4">
+                                <li>{{p.description}}</li>
+                            </ul>
+                            {% for plan in p.plan_set.all %}
+                            <h1 class="card-title pricing-card-title">{{ plan.human_readable_price }}</h1>
+                            <input type="checkbox" name="{{p.name}}" value="{{p.id}}"
+                                onclick="planSelect('{{p.name}}' ,'{{plan.human_readable_price}}', '{{plan.id}}')">
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <br><br><hr><br><br>
+        
+        <div class="row h-100">
+            <div class="col-12">
+                <div class="card mx-5 shadow rounded" style="border-radius:50px;border:none">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold">Checkout</h5>
+                        <p class="text-muted ">Enter card details. Your subscription will start immediately</p>
+                        <div class="row">
+                            <div class="col-6 text-muted">
+                                <p>Plan:</p>
+                                <p>Total:</p>
+                            </div>
+                            <div class="col-6 text-right">
+                                <p id="plan"></p>
+                                <p id="price"></p>
+                                <p hidden id="priceId"></p>
+                            </div>
+
+                        </div>
+                        <br>
+                        <form id="subscription-form">
+                            <div id="card-element" class="MyCardElement">
+                                <!-- Elements will create input elements here -->
+                            </div>
+
+                            <!-- We'll put the error messages in this element -->
+                            <div id="card-errors" role="alert"></div>
+                            <button id="submit" type="submit">
+                                <div class="spinner-border  spinner-border-sm text-light hidden" id="spinner" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                                <span id="button-text">Subscribe</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
 
             </div>
         </div>
     </div>
-{% endblock %}
+
 
 {% block content %}
 

@@ -48,7 +48,7 @@
 <body>
     <header class="container-fluid fixed-top">
         <div class="row">
-            <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
+            <div id="topnav" class="row bg-dark pt-lg-2 d-none d-lg-flex">
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                     <a href="{% url 'home' %}" class="nav-link main-logo-link">
                         <h2 class="logo-font text-white my-0"><strong>MZM</strong> Martial Arts</h2>
@@ -56,7 +56,7 @@
                     <h4 class="logo-font text-white my-0">Kick Boxing & Kung Fu</h4>
                 </div>
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-right">
-
+                    <img src="{{ MEDIA_URL }}logo.jpg" alt="Logo">
                 </div>
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                     <ul class="list-inline list-unstyled text-center text-lg-right my-0">
@@ -121,68 +121,67 @@
     {%block content%}
     {% endblock %}
 
-    <footer class="footer text-center text-white bg-dark">
-        <div class="container">
-            <div class="container p-4 pb-0">
-                <section class="">
-                    <p class="d-flex justify-content-center align-items-center">
-                        <span class="me-3">Sign up starting from £15 / mo</span>
-                        <a class="btn btn-outline-light btn-rounded" href="{% url 'membership_plans' %}"
-                            role="button">Join us!</a>
-                    </p>
-                </section>
-            </div>
-            <div class="row">
-                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Useful links:</h5>
-                    <ul class="list-unstyled mb-0">
-                        <li>
-                            <a href="{% url 'about' %}" class="text-dark">About</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'training' %}" class="text-dark">Training</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'membership_plans' %}" class="text-dark">Membership Plans</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'training' %}" class="text-dark">Kids Classes</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'training' %}" class="text-dark">Adult Classes</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                    <h5 class="text-uppercase">Socials:</h5>
-                    <ul class="list-unstyled mb-0">
-                        <li><a href="https://www.youtube.com/channel/UCvynXxU2kIozuS-8TO_tQ-A" target="_blank">
-                                <i class="fa fa-youtube-play" aria-hidden="true"></i>
-                            </a>
-                        </li>
-                        <li><a href="#" target="_blank">
-                                <i class="fas fa-envelope">info@mzm-semartialarts.com</i>
-                            </a>
-                        </li>
-                        <li><a href="#" target="_blank">
-                                <i class="fas fa-phone-alt">07939 208 909</i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2021 Copyright:
-            <a class="text-white" href="https://mzm-martialarts.com/">mzm-martialarts.com</a>
-        </div>
-
-    </footer>
-
-    {%block js %}
-    {% endblock %}
-
 
 </body>
+<footer class="footer text-center text-white bg-dark">
+    <div class="container bg-dark">
+        <div class="container p-4 pb-0">
+            <section class="">
+                <p class="d-flex justify-content-center align-items-center">
+                    <span class="me-3">Sign up starting from £15 / mo</span>
+                    <a class="btn btn-outline-light btn-rounded" href="{% url 'membership_plans' %}" role="button">Join
+                        us!</a>
+                </p>
+            </section>
+        </div>
+        <div class="row">
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                <h5 class="text-uppercase">Useful links:</h5>
+                <ul class="list-unstyled mb-0 text-white">
+                    <li>
+                        <a href="{% url 'about' %}" class="link-styles">About</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'training' %}" class="link-styles">Training</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'membership_plans' %}" class="link-styles">Membership Plans</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'training' %}" class="link-styles">Kids Classes</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'training' %}" class="link-styles">Adult Classes</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-6 col-md-12 mb-4 mb-md-0 bg-dark">
+                <h5 class="text-uppercase">Socials:</h5>
+                <ul class="list-unstyled mb-0">
+                    <li><a href="https://www.youtube.com/channel/UCvynXxU2kIozuS-8TO_tQ-A" target="_blank">
+                            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li><a href="#" target="_blank">
+                            <i class="fas fa-envelope"> info@mzm-semartialarts.com</i>
+                        </a>
+                    </li>
+                    <li><a href="#" target="_blank">
+                            <i class="fas fa-phone-alt"> 07939 208 909</i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2021 Copyright:
+        <a class="text-white" href="https://mzm-martialarts.com/">mzm-martialarts.com</a>
+    </div>
+
+</footer>
+
+{%block js %}
+{% endblock %}
 
 </html>

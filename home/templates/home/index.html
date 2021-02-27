@@ -11,120 +11,136 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
-                <div class="col-md-6 px-0">
-                    <h1 class="display-4 fst-italic">COVID-19 Update</h1>
-                    <p class="lead my-3">We are running online classes!</p>
-                    <p class="lead mb-0"><a href="#" class="text-white fw-bold">Click here to view classes</a></p>
-                </div>
+<div class="container h-100">
+    <div class="row h-100">
+        <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+            <div class="col-md-6 px-0">
+                <h1 class="display-4 fst-italic">COVID-19 Update</h1>
+                <p class="lead my-3">We are running online classes!</p>
+                <p class="lead my-3">Classes resuming as normal from 12th April 2021. If you would like to book a trial
+                    class contact us directly for further details.</p>
+                <a class="btn btn-lg btn-outline-light btn-rounded" href="{% url 'membership_plans' %}"
+                    role="button">Contact us</a>
             </div>
+        </div>
 
-            <div class="row mb-2">
-                <div class="col-md-6">
-                    <div
-                        class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                        <div class="col p-4 d-flex flex-column position-static">
-                            <h3 class="mb-0">Schedule:</h3>
-                            <ul class="card-text mb-auto">
-                                <li>Kids Classes 5pm Mon-Fri</li>
-                                <li>Adult Classes 7:30pm Mon-Fri</li>
-                                <li>Kids Classes 9:30Am Saturday</li>
-                                <li>Adult Classes 10:30Am Saturday</li>
-                            </ul>
-                            <a href="#" class="stretched-link">Book Now</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div
-                        class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-                        <div class="col p-4 d-flex flex-column position-static">
-                            <h3 class="mb-0">What we teach</h3>
-                            <p class="mb-auto">South east Academy of martial arts teaching traditional kung fu and the more
-                                dynamic freestyle sports karate and kick boxing classes in surrey.</p>
-                            <a href="#" class="stretched-link">Contact us for more info</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-8">
-                    <h2 class="pb-4 mb-4 fst-italic border-bottom">
-                        "FEELING GOOD GETTING BETTER"
-                    </h2>
-                    <h4 class="pb-4 mb-4 fst-italic border-bottom">
-                        BEST KICKBOXING CLASSES IN SURREY
-                    </h4>
-
-                    <article class="blog-post">
-                        <h2 class="blog-post-title">Do you want to get involved in local kickboxing classes?</h2>
-
-                        <p>Learn kickboxing, kung-fu, martial arts & self defence with our qualified experts.</p>
-
-                        <ul>
-                            <li>Build Fitness</li>
-                            <li>Gain Confidence</li>
-                            <li>Become Disciplined</li>
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-dark">
+                    <div class="col p-4 d-flex flex-column position-static align-items-stretch">
+                        <h3 class="mb-0">Schedule:</h3>
+                        <ul class="card-text mb-auto">
+                            <li>Kids Classes 5pm Mon-Fri</li>
+                            <li>Adult Classes 7:30pm Mon-Fri</li>
+                            <li>Kids Classes 9:30Am Saturday</li>
+                            <li>Adult Classes 10:30Am Saturday</li>
                         </ul>
-
-                        <p>Meet new people and have fun!</p>
-
-                        <p>We believe in a healthy & enjoyable way of living. We stand by our motto ‘Feeling Good, Getting
-                            Better’ - meet new people and have fun throughout your martial arts journey.</p>
-
-                        <p>At MZM SE (South East) Martial Arts we provide classes that are open to all experience levels,
-                            ages & abilities. If its your first class, or your hundredth, you’ll be more than welcome to
-                            join us.</p>
-
-                        <p>Get trained by our 4th Dan black belt kickboxing instructor. We can offer both group classes or
-                            private lessons to enable you to feel fitter, stronger and more confident - preparing you for
-                            everyday life!</p>
-
-                        <p>We have classes throughout the week at various locations so <a href="#">book your free session
-                                today!</a></p>
-
-                    </article>
-
-                </div>
-                <div class="col-md-4">
-                    <div class="p-4">
-                        <h4 class="fst-italic">Dojo locations:</h4>
-                        <ol class="list-unstyled mb-0">
-                            <li><a href="https://www.google.co.uk/maps/dir/''/chobham+village+hall/@51.3460819,-0.6716274,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x4876787888e5f82b:0x7f32f5ee8f5b0f7d!2m2!1d-0.6015879!2d51.3461028"
-                                    target="_blank">Cobham</a>
-                            </li>
-                            <li><a href="https://www.google.co.uk/maps/dir/''/ottershaw+village+hall/@51.3651028,-0.6011038,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x487677c7a9832e25:0xb73bc3f3ad0c80d5!2m2!1d-0.5310643!2d51.3651237"
-                                    target="_blank">Ottershaw</a>
-                            </li>
-                            <li><a href="https://www.google.co.uk/maps/dir/''/weybridge+centre/@51.3718691,-0.5287712,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x487675dc9eca737b:0xf3ade87863570b3d!2m2!1d-0.4583759!2d51.3719266"
-                                    target="_blank">Weybridge</a>
-                            </li>
-                            <li><a href="https://www.google.co.uk/maps/dir/''/brookwoodhall/@51.3052261,-0.7101315,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x4875d66240417669:0x75e283c16834e653!2m2!1d-0.640092!2d51.305247"
-                                    target="_blank">Woking</a>
-                            </li>
-                        </ol>
+                        <a class="btn btn-lg btn-outline-light btn-rounded" href="{% url 'membership_plans' %}"
+                            role="button">Book Now!</a>
                     </div>
-
-                    <div class="p-4">
-                        <h4 class="fst-italic">Useful Links:</h4>
-                        <ol class="list-unstyled">
-                            <li><a href="https://www.youtube.com/channel/UCvynXxU2kIozuS-8TO_tQ-A" target="_blank">
-                                    <i class="fa fa-youtube-play" aria-hidden="true">Check out our Youtube channel</i>
-                                </a>
-                            </li>
-                            <li><a href="https://764ac189-0825-4214-a9c9-e3d53889901a.filesusr.com/ugd/10de9d_09cc04c186534e4e8e7d8af1021ccf2a.pdf"
-                                    target="_blank">
-                                    <i class="fas fa-file-pdf">MZM Martial arts data privacy policy</i>
-                                </a>
-                            </li>
-                        </ol>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative bg-dark">
+                    <div class="col p-4 d-flex flex-column position-static align-items-stretch">
+                        <h3 class="mb-0">What we teach</h3>
+                        <p class="mb-auto">South east Academy of martial arts teaching traditional kung fu and the more
+                            dynamic freestyle sports karate and kick boxing classes in surrey.</p>
+                        <a class="btn btn-lg btn-outline-light btn-rounded" href="{% url 'training' %}"
+                            role="button">Click here for more info</a>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="row row-no-margin">
+            <div class="col-xs-12 col-sm-4 col-no-padding">
+                <img src="{{ MEDIA_URL }}home_img1.jpg" alt="Home_1">
+            </div>
+            <div class="col-xs-12 col-sm-4 col-no-padding">
+                <img src="{{ MEDIA_URL }}home_img2.jpg" alt="Home_2" class="thumbnail img-responsive">
+            </div>
+            <div class="col-xs-12 col-sm-4 col-no-padding">
+                <img src="{{ MEDIA_URL }}home_img3.jpg" alt="Home_3" class="thumbnail img-responsive">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+                <h2 class="pb-4 mb-4 fst-italic border-bottom">
+                    "FEELING GOOD GETTING BETTER"
+                </h2>
+                <h4 class="pb-4 mb-4 fst-italic border-bottom">
+                    BEST KICKBOXING CLASSES IN SURREY
+                </h4>
+
+                <article class="blog-post">
+                    <h2 class="blog-post-title">Do you want to get involved in local kickboxing classes?</h2>
+
+                    <p>Learn kickboxing, kung-fu, martial arts & self defence with our qualified experts.</p>
+
+                    <ul>
+                        <li>Build Fitness</li>
+                        <li>Gain Confidence</li>
+                        <li>Become Disciplined</li>
+                    </ul>
+
+                    <p>Meet new people and have fun!</p>
+
+                    <p>We believe in a healthy & enjoyable way of living. We stand by our motto ‘Feeling Good, Getting
+                        Better’ - meet new people and have fun throughout your martial arts journey.</p>
+
+                    <p>At MZM SE (South East) Martial Arts we provide classes that are open to all experience levels,
+                        ages & abilities. If its your first class, or your hundredth, you’ll be more than welcome to
+                        join us.</p>
+
+                    <p>Get trained by our 4th Dan black belt kickboxing instructor. We can offer both group classes or
+                        private lessons to enable you to feel fitter, stronger and more confident - preparing you for
+                        everyday life!</p>
+
+                    <p>We have classes throughout the week at various locations so <a href="#">book your free session
+                            today!</a></p>
+
+                </article>
+
+            </div>
+            <div class="col-md-4">
+                <div class="p-4">
+                    <h4 class="fst-italic">Dojo locations:</h4>
+                    <ol class="list-unstyled mb-0">
+                        <li><a href="https://www.google.co.uk/maps/dir/''/chobham+village+hall/@51.3460819,-0.6716274,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x4876787888e5f82b:0x7f32f5ee8f5b0f7d!2m2!1d-0.6015879!2d51.3461028"
+                                target="_blank" class="link-styles">Cobham</a>
+                        </li>
+                        <li><a href="https://www.google.co.uk/maps/dir/''/ottershaw+village+hall/@51.3651028,-0.6011038,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x487677c7a9832e25:0xb73bc3f3ad0c80d5!2m2!1d-0.5310643!2d51.3651237"
+                                target="_blank" class="link-styles">Ottershaw</a>
+                        </li>
+                        <li><a href="https://www.google.co.uk/maps/dir/''/weybridge+centre/@51.3718691,-0.5287712,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x487675dc9eca737b:0xf3ade87863570b3d!2m2!1d-0.4583759!2d51.3719266"
+                                target="_blank" class="link-styles">Weybridge</a>
+                        </li>
+                        <li><a href="https://www.google.co.uk/maps/dir/''/brookwoodhall/@51.3052261,-0.7101315,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x4875d66240417669:0x75e283c16834e653!2m2!1d-0.640092!2d51.305247"
+                                target="_blank" class="link-styles">Woking</a>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="p-4">
+                    <h4 class="fst-italic">Useful Links:</h4>
+                    <ol class="list-unstyled">
+                        <li><a href="https://www.youtube.com/channel/UCvynXxU2kIozuS-8TO_tQ-A" target="_blank"
+                                class="link-styles">
+                                <i class="fa fa-youtube-play" aria-hidden="true">Check out our Youtube channel</i>
+                            </a>
+                        </li>
+                        <li><a href="https://764ac189-0825-4214-a9c9-e3d53889901a.filesusr.com/ugd/10de9d_09cc04c186534e4e8e7d8af1021ccf2a.pdf"
+                                target="_blank" class="link-styles">
+                                <i class="fas fa-file-pdf">MZM Martial arts data privacy policy</i>
+                            </a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 
 {% endblock %}
