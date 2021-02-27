@@ -46,6 +46,8 @@ INSTALLED_APPS = [
     'media',
     'checkout',
     'about',
+    'training',
+    'membership_plans',
 
 ]
 
