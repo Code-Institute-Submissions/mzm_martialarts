@@ -7,6 +7,18 @@ body {
     background-size: cover;
     color: white;
     font-family: 'Old Standard TT', serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 80px;
+}
+
+.logo_bkgrnd {
+    mix-blend-mode: multiply;
+}
+
+.my-c {
+    min-height: 239px;
+    position: relative;
 }
 
 /* from Bulma */
@@ -47,8 +59,12 @@ body {
     color: white;
 }
 
-.text-white {
-    color: #FFFFFF !important;
+.text-black {
+    color: black;
+}
+
+.text-black {
+    color: white;
 }
 
 .link-styles {
@@ -106,14 +122,19 @@ body {
     }
 }
 
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
 
 /* -------------------------------- Icons */
 
  i.fas,
     i.fab {
-      color: white;
+      color: black;
     }
 
 .icon_label {
-    color: white;
+    color: black;
 }
