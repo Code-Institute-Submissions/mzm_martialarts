@@ -53,6 +53,7 @@ User stories:
  - Friendlier ux for purchases, the default stripe payment url is used in this website, a unique one could be created and implemented.
  - Access to the email provided in the link was not available so confirmation emails are sent from a fictional address.
  - Better quality photos would help keep the styling cleaner.
+ - UPDATE - On the night before submission was due my computer crashed before I had a chance to commit the changes from the subscription method and payment form, the stripe usage is there but not functional with the submit button in checkout.html form, due to lack of time to go over again I have been unable to fix it as I had tried many different methods and couldn't put together the method which had worked fro me.
 ---
 
 ## Technologies Used
@@ -100,7 +101,9 @@ Login User: - Add login to navbar.
 
 ## Deployment
 
-The website was written in gitpod and deployed through github repositories using regular git commits from the command terminal in gitpod. It is run using Flask
+The website was written in gitpod and deployed through github repositories using regular git commits from the command terminal in gitpod. It is run using Django and allauth.
+
+An app was created in heroku called mzm-mrtialarts, it was then linked to the github repository gnisco/mzm_martialarts.
 
 There is no differences between the deployed version and deployment version.
 
