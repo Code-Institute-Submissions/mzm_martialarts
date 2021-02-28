@@ -10,9 +10,17 @@
 {% block extra_title %}
 <title>Checkout</title>
 {% endblock %}
-
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
 {% block page_header %}
-    <div class="container h-100">
+   
+{% endblock %}
+
+{% block content %}
+     <div class="container h-100">
         <div class="row h-100">
             <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
                 <h1 class="display-4">Membership Plans</h1>
@@ -21,7 +29,7 @@
                     with
                     subscriptions provided for students of all ability levels.</p>
             </div>
-            <div class="container">
+            <div class="container bg-dark">
                 <div class="card-deck mb-3 text-center">
                     {% for p in products %}
                     <div class="card mb-4 box-shadow">
@@ -34,8 +42,7 @@
                             </ul>
                             {% for plan in p.plan_set.all %}
                             <h1 class="card-title pricing-card-title">{{ plan.human_readable_price }}</h1>
-                            <input type="checkbox" name="{{p.name}}" value="{{p.id}}"
-                                onclick="planSelect('{{p.name}}' ,'{{plan.human_readable_price}}', '{{plan.id}}')">
+                            <button type="submit" class="btn btn-primary" id="submitBtn">Subscribe</button>
                             {% endfor %}
                         </div>
                     </div>
@@ -85,8 +92,4 @@
             </div>
         </div>
     </div>
-
-
-{% block content %}
-
 {% endblock %}

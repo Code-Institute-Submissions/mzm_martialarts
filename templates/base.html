@@ -61,14 +61,14 @@
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                     <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                         <li class="list-inline-item dropdown">
-                            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
+                            <a class="text-black nav-link" href="#" id="user-options" data-toggle="account-dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                                 <div class="text-center">
                                     <div><i class="fas fa-user fa-lg"></i></div>
                                     <p class="my-0">My Account</p>
                                 </div>
                             </a>
-                            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                            <div class="dropdown-menu dropdown border-0" aria-labelledby="user-options" data-target="account-dropdown">
                                 {% if request.user.is_authenticated %}
                                     {% if request.user.is_superuser %}
                                         <a href="" class="dropdown-item">Product Management</a>
@@ -81,21 +81,6 @@
                                 {% endif %}
                             </div>
                         </li>
-                        <li class="list-inline-item">
-                            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
-                                href="{% url 'checkout' %}">
-                                <div class="text-center">
-                                    <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                                    <p class="my-0">
-                                        {% if grand_total %}
-                                        ${{ grand_total|floatformat:2 }}
-                                        {% else %}
-                                        $0.00
-                                        {% endif %}
-                                    </p>
-                                </div>
-                            </a>
-                        </li>
                     </ul>
                 </div>
             </div>
@@ -105,7 +90,6 @@
                     aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                {% include 'includes/mobile_nav.html' %}
                 {% include 'includes/main_nav.html' %}
             </nav>
         </div>
@@ -123,21 +107,27 @@
 
 
 </body>
-<footer class="footer text-center text-white bg-dark">
-    <div class="container bg-dark">
-        <div class="container p-4 pb-0">
-            <section class="">
-                <p class="d-flex justify-content-center align-items-center">
-                    <span class="me-3">Sign up starting from £15 / mo</span>
-                    <a class="btn btn-outline-light btn-rounded" href="{% url 'membership_plans' %}" role="button">Join
-                        us!</a>
-                </p>
-            </section>
-        </div>
+
+<footer class="bg-light text-center text-lg-start">
+    <!-- Grid container -->
+    <div class="container p-4">
+        <!--Grid row-->
         <div class="row">
+            <!--Grid column-->
             <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                <h5 class="text-uppercase text-black">Our aim:</h5>
+
+                <p class="text-black">
+                    We aim to provide an online martial arts subscription learning service that emails you new classes every week tailored to your skill level!
+                </p>
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
                 <h5 class="text-uppercase">Useful links:</h5>
-                <ul class="list-unstyled mb-0 text-white">
+
+                <ul class="list-unstyled mb-0">
                     <li>
                         <a href="{% url 'about' %}" class="link-styles">About</a>
                     </li>
@@ -147,17 +137,15 @@
                     <li>
                         <a href="{% url 'membership_plans' %}" class="link-styles">Membership Plans</a>
                     </li>
-                    <li>
-                        <a href="{% url 'training' %}" class="link-styles">Kids Classes</a>
-                    </li>
-                    <li>
-                        <a href="{% url 'training' %}" class="link-styles">Adult Classes</a>
-                    </li>
                 </ul>
             </div>
-            <div class="col-lg-6 col-md-12 mb-4 mb-md-0 bg-dark">
-                <h5 class="text-uppercase">Socials:</h5>
-                <ul class="list-unstyled mb-0">
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <h5 class="text-uppercase mb-0">Socials:</h5>
+
+                <ul class="list-unstyled">
                     <li><a href="https://www.youtube.com/channel/UCvynXxU2kIozuS-8TO_tQ-A" target="_blank">
                             <i class="fa fa-youtube-play" aria-hidden="true"></i>
                         </a>
@@ -172,13 +160,18 @@
                     </li>
                 </ul>
             </div>
+            <!--Grid column-->
         </div>
+        <!--Grid row-->
     </div>
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2021 Copyright:
-        <a class="text-white" href="https://mzm-martialarts.com/">mzm-martialarts.com</a>
-    </div>
+    <!-- Grid container -->
 
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2020 Copyright:
+        <a class="text-dark" href="https://mzm-martialarts.com/">mzm-martialarts.com</a>
+    </div>
+    <!-- Copyright -->
 </footer>
 
 {%block js %}

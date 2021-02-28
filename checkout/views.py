@@ -6,6 +6,7 @@ from django.http.response import JsonResponse, HttpResponse
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from checkout.models import StripeCustomer
+from djstripe.models import Product
 
 # Create your views here.
 
@@ -14,7 +15,9 @@ def checkout(request):
 
     """ A view that that renders the checkout page """
 
-    return render(request, '/checkout/checkout.html')
+    return render(request, 'checkout/checkout.html', {
+        'products': Product.objects.all()
+    })
 
 
 @csrf_exempt
